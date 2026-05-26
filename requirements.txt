@@ -3,3 +3,7 @@ torchvision>=0.15
 gradio>=5.0
 numpy
 Pillow
+# Jupyter notebook 所需（可选）
+matplotlib
+scikit-learn
+jupyter
