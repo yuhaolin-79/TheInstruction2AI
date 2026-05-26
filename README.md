@@ -136,27 +136,11 @@ python app.py
 
 Gradio Web 应用需要后端服务器，可以用 Hugging Face Spaces 免费部署：
 
-[![Hugging Face Spaces](https://img.shields.io/badge/🤗%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces)
+[![Hugging Face Spaces](https://img.shields.io/badge/🤗%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/nie2213456/mnist-demo)
 
-部署步骤：
+在线体验：**[nie2213456/mnist-demo](https://huggingface.co/spaces/nie2213456/mnist-demo)**
 
-```bash
-# 1. 在 https://huggingface.co/new-space 创建 Space（选择 Gradio SDK）
-# 2. 上传 app.py、model.py、requirements.txt 和 mnist_model.pth
-# 3. Space 会自动安装依赖并启动
-```
-
-或者使用 CLI 一键部署：
-```bash
-pip install huggingface-hub
-huggingface-cli login
-# 克隆 Space 并推送代码
-git clone https://huggingface.co/spaces/你的用户名/你的空间名
-cp app.py model.py requirements.txt mnist_model.pth 那个目录/
-cd 那个目录/
-git add . && git commit -m "deploy mnist demo"
-git push
-```
+> 首次访问时 Space 会从休眠状态唤醒，等待约 30 秒即可使用。
 
 ---
 
