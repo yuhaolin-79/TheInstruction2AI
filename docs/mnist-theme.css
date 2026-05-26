@@ -1,0 +1,175 @@
+/* ============================================================
+   MNIST Demo — 蓝白简约主题 (覆盖 JupyterLab 默认样式)
+   ============================================================ */
+
+/* ---------- 全局颜色变量 ---------- */
+body {
+  --bg-main: #f5f7fb;
+  --bg-card: #ffffff;
+  --bg-code: #f0f4ff;
+  --accent: #4361ee;
+  --accent-light: #eef4ff;
+  --accent-dark: #1a1a3e;
+  --text-main: #1a1a2e;
+  --text-secondary: #4a4a6a;
+  --text-light: #8a8aaa;
+  --border: #dde4f0;
+  --shadow: rgba(67, 97, 238, 0.08);
+
+  background: var(--bg-main);
+  color: var(--text-main);
+}
+
+/* ---------- 页面背景 ---------- */
+#site {
+  background: var(--bg-main);
+}
+
+/* ---------- 笔记本容器 ---------- */
+.jp-Notebook {
+  background: transparent !important;
+  padding: 0 24px !important;
+}
+
+/* ---------- 每个单元格卡片 ---------- */
+.jp-Cell {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 12px !important;
+  margin: 16px 0 !important;
+  box-shadow: 0 2px 8px var(--shadow) !important;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+.jp-Cell:hover {
+  box-shadow: 0 4px 16px rgba(67, 97, 238, 0.12) !important;
+}
+
+/* ---------- Markdown 单元格 ---------- */
+.jp-MarkdownCell {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  margin: 12px 0 !important;
+}
+.jp-MarkdownCell:hover {
+  box-shadow: none !important;
+}
+
+.jp-MarkdownCell .jp-InputArea-editor {
+  background: transparent !important;
+}
+
+/* ---------- 代码单元格 ---------- */
+.jp-CodeCell .jp-InputArea-editor {
+  background: var(--bg-code) !important;
+  border-radius: 8px !important;
+  margin: 4px 8px !important;
+}
+
+.jp-InputPrompt {
+  color: var(--accent) !important;
+  font-weight: 600 !important;
+}
+
+/* ---------- 输出区域 ---------- */
+.jp-OutputArea {
+  padding: 8px 12px !important;
+  background: var(--bg-main) !important;
+  border-radius: 0 0 12px 12px !important;
+}
+
+.jp-OutputPrompt {
+  color: var(--text-light) !important;
+}
+
+/* ---------- 输出中的文本 ---------- */
+.jp-OutputArea-output pre {
+  color: var(--text-secondary) !important;
+}
+
+/* ---------- 表格输出 ---------- */
+.jp-RenderedHTMLCommon table {
+  border-collapse: collapse !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+.jp-RenderedHTMLCommon th {
+  background: var(--accent-light) !important;
+  color: var(--accent-dark) !important;
+  font-weight: 600 !important;
+}
+.jp-RenderedHTMLCommon td, .jp-RenderedHTMLCommon th {
+  border: 1px solid var(--border) !important;
+  padding: 8px 12px !important;
+}
+
+/* ---------- 代码语法高亮 ---------- */
+.highlight {
+  background: var(--bg-code) !important;
+}
+.highlight .k, .highlight .o { color: #4361ee !important; }  /* 关键字蓝色 */
+.highlight .s, .highlight .s2 { color: #2d6a4f !important; } /* 字符串绿色 */
+.highlight .mf, .highlight .mi { color: #e07b39 !important; } /* 数字橙色 */
+.highlight .c1, .highlight .c { color: #6a8a9a !important; font-style: italic !important; } /* 注释灰色 */
+.highlight .kn, .highlight .ow { color: #4361ee !important; font-weight: bold !important; }
+
+/* ---------- 带颜色的输出文本 ---------- */
+.jp-OutputArea-output .ansi-cyan-fg { color: #4361ee !important; }
+.jp-OutputArea-output .ansi-blue-fg { color: #4361ee !important; }
+.jp-OutputArea-output .ansi-green-fg { color: #2d6a4f !important; }
+.jp-OutputArea-output .ansi-red-fg { color: #e63946 !important; }
+
+/* ---------- 图片输出 ---------- */
+.jp-RenderedImage {
+  text-align: center !important;
+  padding: 12px !important;
+  background: var(--bg-main) !important;
+  border-radius: 8px !important;
+  margin: 8px 0 !important;
+}
+
+/* ---------- 标题栏 ---------- */
+.jp-Toolbar {
+  background: var(--bg-card) !important;
+  border-bottom: 1px solid var(--border) !important;
+}
+
+/* ---------- 滚动条 ---------- */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+/* ---------- 链接 ---------- */
+a { color: var(--accent) !important; }
+a:hover { color: var(--accent-dark) !important; }
+
+/* ---------- 代码内联 ---------- */
+code {
+  background: var(--accent-light) !important;
+  color: var(--accent-dark) !important;
+  padding: 2px 6px !important;
+  border-radius: 4px !important;
+}
+
+/* ---------- 设置标题的蓝色点缀 ---------- */
+h1 { color: var(--accent-dark) !important; }
+h2 {
+  color: var(--accent-dark) !important;
+  border-bottom: 2px solid var(--accent-light) !important;
+  padding-bottom: 6px !important;
+}
+h3, h4 { color: var(--accent-dark) !important; }
+
+/* ---------- 水平线 ---------- */
+hr {
+  border: none !important;
+  border-top: 1px solid var(--border) !important;
+  margin: 24px 0 !important;
+}
+
+/* ---------- 移除 JupyterLab 顶部的大片空白和冗余栏 ---------- */
+.jp-LabShell, .jp-NotebookPanel-toolbar {
+  display: none !important;
+}
